@@ -17,10 +17,10 @@ class Listing extends Model
             //or $query->where('tags','like','%'.$filters['tag'].'%');
         }
         if ($filters['search'] ?? false){
-            $query->where('title','like','%'.request('search').'%')
+            $query->where('aprtmnt_name','like','%'.request('search').'%')
             ->orWhere('description','like','%'.request('search').'%')
             ->orWhere('extras','like','%'.request('search').'%')
-            ->orWhere('company','like','%'.request('search').'%');
+            ->orWhere('closest_town','like','%'.request('search').'%');
         }
 
     }

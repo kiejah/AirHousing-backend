@@ -16,8 +16,17 @@
                     <div class="flex flex-col items-left justify-left text-left">
 
 
-                        <h3 class="text-2xl mb-2">{{ $listing->aprtmnt_name }}</h3>
-                        <div class="text-xl font-bold mb-4">{{ $listing->apartmentType->apartment_type_name }}</div>
+                        <h3 class="text-2xl mb-2">{{ $listing->aprtmnt_name }}
+                        </h3>
+
+                        <div class="text-xl font-bold mb-4">
+                            {{ $listing->apartmentType->apartment_type_name }}
+                            @if ($listing->aprtmnt_name)
+                                <span class="bg-green-500 ml-3 p-2 text-white border-2 border-white shadow-md">
+                                    Vacant
+                                </span>
+                            @endif
+                        </div>
                         {{-- tags --}}
                         <x-listing-tags :tagsCsv="$listing->extras" />
                         {{-- endtags --}}

@@ -20,7 +20,7 @@ class ListingController extends Controller
        
         return view('listings.index',[
             'heading'=>'Latest Listings',
-            'listings'=>Listing::latest()->filter(request(['extras','search']))->paginate(6)
+            'listings'=>Listing::latest()->filter(request(['extras','search']))->where('vacant',TRUE)->paginate(6)
         ]);
     }
 
