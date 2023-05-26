@@ -11,6 +11,9 @@ module.exports = {
             laravel: "#2980B9",
             search_bg:'#e8541d',
         },
+        fontFamily:{
+          body:['Lato']
+        }
     },
   },
   plugins: [],
