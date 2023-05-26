@@ -27,10 +27,12 @@ return new class extends Migration
             $table->string('location');
             $table->string('contact_phone_number');
             $table->longText('description');
+            $table->boolean('vacant')->default(1);
             $table->foreign('county_id')
                   ->references('id')->on('counties')->onDelete('cascade');
             $table->foreign('house_aprt_type')
                   ->references('id')->on('apartment_types')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

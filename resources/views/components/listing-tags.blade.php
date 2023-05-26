@@ -1,7 +1,7 @@
-@props(['extrasCsv'])
+@props(['tagsCsv'])
 
 @php
-    $extras = explode(',', $extrasCsv);
+    $extras = explode(',', $tagsCsv);
 @endphp
 <ul class="flex">
 

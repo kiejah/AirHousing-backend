@@ -12,7 +12,7 @@
             <div class="text-xl font-bold mb-4">{{ $listing->apartmentType->apartment_type_name }}</div>
             <div class="text-xl font-bold mb-4">Rent per Month: Ksh{{ $listing->price }}</div>
 
-            <x-listing-tags :extrasCsv="$listing->extras" />
+            <x-listing-tags :tagsCsv="$listing->extras" />
             <div class="text-lg mt-4">
                 <i class="fa-solid fa-location-dot"></i> {{ $listing->location }} - <span
                     class="font-bold">{{ $listing->county->name }} County </span>

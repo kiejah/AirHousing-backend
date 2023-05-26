@@ -17,7 +17,7 @@ class ListingController extends Controller
      */
     public function index()
     {
-        
+       
         return view('listings.index',[
             'heading'=>'Latest Listings',
             'listings'=>Listing::latest()->filter(request(['extras','search']))->paginate(6)
@@ -77,6 +77,7 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {
         //
+       // dd($listing);
         return view('listings.show',[
             'listing'=> $listing
         ]);

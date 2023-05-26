@@ -3,9 +3,10 @@
     <x-card class="p-10">
         <header>
             <h1 class="text-3xl text-center font-bold my-6 uppercase">
-                Manage Gigs
+                Manage Houses
             </h1>
         </header>
+
 
         <table class="w-full table-auto rounded-sm">
             <tbody>
@@ -13,8 +14,13 @@
                     @foreach ($listings as $listing)
                         <tr class="border-gray-300">
                             <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                <img class="hidden w-16 mr-6 md:block"
+                                    src="{{ $listing->main_image ? asset('storage/' . $listing->main_image) : asset('images/no-image.png') }}"
+                                    alt="" />
+                            </td>
+                            <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
                                 <a href="show.html">
-                                    {{ $listing->title }}
+                                    {{ $listing->aprtmnt_name }}
                                 </a>
                             </td>
                             <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
